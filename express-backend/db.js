@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // Prefer common env var names, fall back to legacy `url` if present, else default to localhost.
-const MONGO_URI = process.env.MONGO_URI || process.env.MONGO_URL || process.env.url || 'mongodb://127.0.0.1:27017/codegenius';
+const MONGO_URI = process.env.MONGO_URL || process.env.MONGO_URL || process.env.url || 'mongodb://127.0.0.1:27017/codegenius';
 
 if (!MONGO_URI) {
     console.error('MongoDB connection string is not set. Please set MONGO_URI in your .env file.');
